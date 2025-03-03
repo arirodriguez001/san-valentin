@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz San Valentín</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffccdc;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: aparecer 2s ease-out forwards;
+        }
+
+        @keyframes aparecer {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .flor {
+            width: 100px;
+            height: 100px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Simple_red_rose.svg/2048px-Simple_red_rose.svg.png') no-repeat center;
+            background-size: contain;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #d6336c;
+            margin-top: 10px;
+            animation: latido 1s infinite alternate;
+        }
+
+        @keyframes latido {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flor"></div>
+        <h1>Feliz San Valentín 💖</h1>
+    </div>
+</body>
+</html>
