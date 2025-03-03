@@ -7,6 +7,7 @@
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -25,10 +26,23 @@
             from { transform: scale(1); }
             to { transform: scale(1.1); }
         }
+
+        .regalito {
+            font-size: 1rem;
+            color: #a83256;
+            margin-top: 20px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .regalito:hover {
+            color: #721c24;
+        }
     </style>
 </head>
 <body>
     <h1>Te amo mucho Teo, de Ari ❤️</h1>
+    <p class="regalito" onclick="window.location.href='regalo.html'">Regalito 🎁</p>
 </body>
 </html>
 
