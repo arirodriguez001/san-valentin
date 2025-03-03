@@ -14,6 +14,7 @@
             background-color: #ffccdc;
             font-family: Arial, sans-serif;
             text-align: center;
+            overflow: hidden;
         }
 
         .flor-container {
@@ -24,11 +25,10 @@
         }
 
         .flor {
-            width: 20px;
-            height: 20px;
+            width: 50px;
             opacity: 0;
             transform: scale(0);
-            animation: crecer 3s ease-out forwards;
+            transition: transform 3s ease-out, opacity 3s ease-out;
         }
 
         h1 {
@@ -48,21 +48,6 @@
         .mensaje:hover {
             color: #721c24;
         }
-
-        @keyframes crecer {
-            0% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 0.5;
-                transform: scale(1.5);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
     </style>
 </head>
 <body>
@@ -71,5 +56,16 @@
     </div>
     <h1>Feliz San Valentín ❤️</h1>
     <p class="mensaje" onclick="window.location.href='mensaje.html'">Clickear para ver más</p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let flor = document.querySelector(".flor");
+            setTimeout(() => {
+                flor.style.opacity = "1";
+                flor.style.transform = "scale(1)";
+            }, 500);
+        });
+    </script>
 </body>
 </html>
+
